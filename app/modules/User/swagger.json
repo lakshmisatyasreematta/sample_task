@@ -1,0 +1,132 @@
+{
+    "paths": {
+        "/users/register": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "description": "Create new user in system",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "required": true,
+                        "in": "body",
+                        "description": "User that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/Register"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "New user is created",
+                        "schema": {
+                            "$ref": "#/definitions/Register"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/login": {
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "description": "Login",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Login",
+                        "schema": {
+                            "$ref": "#/definitions/Login"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Login.",
+                        "schema": {
+                            "$ref": "#/definitions/Login"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/listing": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "description": "User list",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Users list.",
+                        "schema": {
+                            "$ref": "#/definitions/UsersList"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Register": {
+            "required": [
+                "emailId","password","userName"
+            ],
+            "properties": {
+                "emailId": {
+                    "type": "string",
+                    "example": "lakshmisatyasreematta@gmail.com",
+                    "uniqueItems": true
+                },
+                "password": {
+                    "type": "string",
+                    "example": "Test@123",
+                    "uniqueItems": true
+                },
+                "userName": {
+                    "example": "Lakshmi",
+                    "type": "string",
+                    "uniqueItems": true
+                }
+            }
+        },
+        "Login": {
+            "required": [
+                "emailId",
+                "password"
+            ],
+            "properties": {
+                "emailId": {
+                    "type": "string",
+                    "example": "lakshmisatyasreematta@gmail.com",
+                    "uniqueItems": true
+                },
+                "password": {
+                    "type": "string",
+                    "example": "Test@123",
+                    "uniqueItems": true
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+	"LOGIN_SUCCESS": "Logged in successfully.",
+	"INVALID_PASSWORD": "Authentication Failed, Invalid Password.",
+	"SUCCESS": "Working",
+	"VALID_EMAIL": "VALID_EMAIL",
+	"%s REQUIRED": "%s REQUIRED",
+	"PASSWORD_VALIDATION_LENGTH": "PASSWORD_VALIDATION_LENGTH",
+	"PASSWORD_VALIDATION": "PASSWORD_VALIDATION",
+	"DUPLICATE_EMAIL_OR_USERNAME": "EmailId is already exists"
+}

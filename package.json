@@ -1,0 +1,53 @@
+{
+  "name": "nodev14",
+  "version": "1.0.0",
+  "description": "Sample Task",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "5.0.0",
+    "body-parser": "1.19.0",
+    "compression": "1.7.4",
+    "connect-timeout": "1.9.0",
+    "cors": "2.8.5",
+    "custom-env": "2.0.1",
+    "express": "4.17.1",
+    "express-basic-auth": "1.2.0",
+    "express-force-ssl": "0.3.2",
+    "express-rate-limit": "5.0.0",
+    "express-session": "1.16.2",
+    "express-validator": "6.1.1",
+    "file-system": "2.2.2",
+    "glob": "7.1.4",
+    "http-auth": "3.2.3",
+    "i18n": "0.8.3",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "3.0.0",
+    "morgan": "1.9.1",
+    "morgan-body": "2.4.7",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "password-validator": "4.1.1",
+    "pg": "8.5.1",
+    "sequelize": "6.5.1",
+    "swagger-ui-express": "4.0.6"
+  },
+  "devDependencies": {
+    "sonarqube-scanner": "2.4.1"
+  },
+  "scripts": {
+    "sonar": "node sonar-project.js",
+    "test": "snyk test",
+    "start": "node server.js",
+    "sonar-test": "sonar-scanner"
+  },
+  "targets": [
+    {
+      "target_name": "binding",
+      "sources": [
+        "src/binding.cc"
+      ]
+    }
+  ],
+  "author": "Lakshmi",
+  "license": "ISC"
+}
